@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping http://www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd ">
+	<class name="com.entity.Xs" table="xs">
+		<id name="xsno">
+			<generator class="native"/>
+		</id>
+		<property name="xsname"/>
+		<property name="xsage"/>
+		<property name="xssex"/>
+		<property name="xsshobby"/>
+		<property name="xsimg"/>
+		<property name="xssintime" type="date"/>
+	</class>
+</hibernate-mapping>

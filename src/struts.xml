@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	
+	<!-- 设置系统参数 -->
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.action.extension" value="action,do,,"/>
+	<!-- 设置struts UI主题风格 -->
+	<constant name="struts.ui.theme" value="simple"/>
+	<!-- 加载资源文件 -->
+	<constant name="struts.custom.i18n.resources" value="lable"/>
+	<!-- 设定默认地区语种 -->
+	<constant name="struts.locale" value="zh_CN"/>
+	<!-- 设置Action -->
+	<package name="mytest" extends="struts-default">
+		<global-allowed-methods>regex:.*</global-allowed-methods>
+		<action name="xsAction_*" method="{1}" class="com.web.XsAction">
+			<result name="input">/addxs.jsp</result>
+			<result name="toAddXs" type="redirect">/NewFile.jsp?res=${res}</result>
+			<result name="xsList">/xsList.jsp</result>
+		    <result name="xssList">/xssList.jsp</result>
+		    <result name="xsssList">/xsssList.jsp</result>
+			<result name="toStuList" type="redirectAction">xsAction_StuListXs?res=${res}</result>
+			<result name="updateStu">/updateStu.jsp</result>
+		</action>
+		
+		
+	</package>
+	
+	
+</struts>
+
+
+
+
+
